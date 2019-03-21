@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="labelDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHr-el-x50" customClass="CollapsibleLabel" customModule="labelDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="335" height="243.5"/>
+                                <string key="text">A quick brown fox jumps over a lazy dog  and story begins It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B0o-Zt-kGr">
+                                <rect key="frame" x="0.0" y="273.5" width="375" height="393.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lblCell" rowHeight="84" id="4Sc-rQ-Q93" customClass="TVCell" customModule="labelDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Sc-rQ-Q93" id="e0Y-Gm-mbC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2l-BI-Aj9" customClass="CollapsibleLabel" customModule="labelDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="10" width="335" height="63.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Z2l-BI-Aj9" secondAttribute="bottom" constant="10" id="391-Ae-cSj"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z2l-BI-Aj9" secondAttribute="trailing" constant="20" id="D1P-A7-Qzv"/>
+                                                <constraint firstItem="Z2l-BI-Aj9" firstAttribute="leading" secondItem="e0Y-Gm-mbC" secondAttribute="leading" constant="20" id="n4S-bI-AI2"/>
+                                                <constraint firstItem="Z2l-BI-Aj9" firstAttribute="top" secondItem="e0Y-Gm-mbC" secondAttribute="top" constant="10" id="niH-5O-9JG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCollaps" destination="Z2l-BI-Aj9" id="RST-dJ-bBm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1bV-J9-kzL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TgT-24-J2X"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GHr-el-x50" secondAttribute="trailing" constant="20" id="Ipw-He-fCn"/>
+                            <constraint firstItem="B0o-Zt-kGr" firstAttribute="top" secondItem="GHr-el-x50" secondAttribute="bottom" constant="10" id="LZO-VV-oRS"/>
+                            <constraint firstItem="B0o-Zt-kGr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iYG-of-bNZ"/>
+                            <constraint firstItem="B0o-Zt-kGr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oxd-NS-Ozn"/>
+                            <constraint firstItem="B0o-Zt-kGr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xzH-o2-EKo"/>
+                            <constraint firstItem="GHr-el-x50" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zY5-zP-DxG"/>
+                            <constraint firstItem="GHr-el-x50" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ziy-Hu-JxE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblMore" destination="GHr-el-x50" id="Zew-bo-wgO"/>
+                        <outlet property="tblView" destination="B0o-Zt-kGr" id="Tp8-Dr-lld"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
